@@ -55,21 +55,14 @@ set(SRC_FILES
     src/CascRootFile_WoW.cpp
 )
 
-set(LINK_LIBS)
-find_package(ZLIB)
-if (ZLIB_FOUND)
-    set(LINK_LIBS ${LINK_LIBS} ZLIB::ZLIB)
-    add_definitions(-DCASC_USE_SYSTEM_ZLIB)
-else()
-    set(SRC_FILES ${SRC_FILES}
-        src/zlib/adler32.c
-        src/zlib/crc32.c
-        src/zlib/inffast.c
-        src/zlib/inflate.c
-        src/zlib/inftrees.c
-        src/zlib/zutil.c
-    )
-endif()
+set(SRC_FILES ${SRC_FILES}
+    src/zlib/adler32.c
+    src/zlib/crc32.c
+    src/zlib/inffast.c
+    src/zlib/inflate.c
+    src/zlib/inftrees.c
+    src/zlib/zutil.c
+)
 
 set(TEST_SRC_FILES
     test/CascTest.cpp
