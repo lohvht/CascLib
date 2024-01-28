@@ -55,15 +55,6 @@ set(SRC_FILES
     src/CascRootFile_WoW.cpp
 )
 
-set(SRC_FILES ${SRC_FILES}
-    src/zlib/adler32.c
-    src/zlib/crc32.c
-    src/zlib/inffast.c
-    src/zlib/inflate.c
-    src/zlib/inftrees.c
-    src/zlib/zutil.c
-)
-
 set(TEST_SRC_FILES
     test/CascTest.cpp
 )
